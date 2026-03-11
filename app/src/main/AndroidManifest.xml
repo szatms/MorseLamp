@@ -11,6 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MorseLamp">
+
+        <activity android:name=".PresetMessagesActivity" />
+        <activity android:name=".TextToMorseActivity" />
+        <activity android:name=".QuickMessagesActivity" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -1,6 +1,8 @@
 package com.example.morselamp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +21,25 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        Button btnPreset = findViewById(R.id.btnPreset);
+        Button btnText = findViewById(R.id.btnTextToMorse);
+        Button btnQuick = findViewById(R.id.btnQuick);
+
+        btnPreset.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, PresetMessagesActivity.class);
+            startActivity(intent);
+        });
+
+        btnText.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, TextToMorseActivity.class);
+            startActivity(intent);
+        });
+
+        btnQuick.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, QuickMessagesActivity.class);
+            startActivity(intent);
         });
     }
 }
