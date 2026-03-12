@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        LampUtils.init(this);
+
         Button btnPreset = findViewById(R.id.btnPreset);
         Button btnText = findViewById(R.id.btnTextToMorse);
         Button btnQuick = findViewById(R.id.btnQuick);
